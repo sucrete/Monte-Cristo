@@ -11,7 +11,7 @@ const RatesSection = ({ ratesSectionData }) => {
         {weekday && <RevealAnimation delay={0.1}>
           <div className="table-wrapper">
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{weekday.ratesHeading}</h3>
+              <h3 className=" lg:max-w-1/2 text-[3rem] pb-[.7rem]">{weekday.ratesHeading}</h3>
               {weekday.ratesDescription?.length > 0 && <p className="lg:max-w-1/2">{weekday.ratesDescription} </p>}
             </div>
             <table className="table-auto table-striped table-striped-3">
@@ -83,7 +83,7 @@ const RatesSection = ({ ratesSectionData }) => {
           <div className="table-wrapper pt-[7rem]">
             <hr className="mb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{weekend.ratesHeading}</h3>
+              <h3 className=" lg:max-w-1/2 text-[3rem] pb-[.7rem]">{weekend.ratesHeading}</h3>
               {weekend.ratesDescription?.length > 0 && <p className="lg:max-w-1/2">{weekend.ratesDescription} </p>}
             </div>
             <table className="table-auto table-striped table-striped-3">
@@ -156,7 +156,7 @@ const RatesSection = ({ ratesSectionData }) => {
           <div className="table-wrapper pt-[7rem]">
             <hr className="mb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{twilight.ratesHeading}</h3>
+              <h3 className=" lg:max-w-1/2 text-[3rem] pb-[.7rem]">{twilight.ratesHeading}</h3>
               {twilight.ratesDescription?.length > 0 && <p className="lg:max-w-1/2">{twilight.ratesDescription} </p>}
             </div>
             <table className="table-auto table-striped table-striped-3">
@@ -195,7 +195,7 @@ const RatesSection = ({ ratesSectionData }) => {
           <div className="table-wrapper pt-[7rem]">
             <hr className="mb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="font-serif lg:max-w-1/2 text-[3rem] pb-[.7rem]">{nonStandard.ratesHeading}</h3>
+              <h3 className=" lg:max-w-1/2 text-[3rem] pb-[.7rem]">{nonStandard.ratesHeading}</h3>
               {nonStandard.ratesDescription?.length > 0 && (
                 <p className="lg:max-w-1/2">{nonStandard.ratesDescription} </p>
               )}

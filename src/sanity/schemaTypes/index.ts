@@ -2,7 +2,7 @@ import { SchemaTypeDefinition } from 'sanity';
 
 // DOCUMENTS
 import membershipsType from './membershipsType';
-import newsType from './newsType';
+// import newsType from './newsType';
 import eventType from './eventType';
 import tickerType from './tickerType';
 import blogType from './blogType';
@@ -34,7 +34,7 @@ import {
 export const schemaTypes: SchemaTypeDefinition[] = [
   blogType,
   rawHtml,
-  newsType,
+  // newsType,
   eventType,
   tickerArray,
   tickerType,

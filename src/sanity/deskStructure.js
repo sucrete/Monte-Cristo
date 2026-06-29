@@ -2,7 +2,7 @@
 import {
   ArticleIcon,
   CalendarBlankIcon,
-  NewspaperIcon,
+  // NewspaperIcon,
   BellIcon,
   IdentificationCardIcon,
   CurrencyDollarIcon,
@@ -59,12 +59,12 @@ export const deskStructure = (S, context) =>
                 .icon(MoonIcon)
                 .title('Twilight')
                 .child(S.document().schemaType('twilightRates').documentId('twilightRates').title('Twilight')),
-              S.listItem()
-                .icon(GolfIcon)
-                .title('Non-Standard')
-                .child(
-                  S.document().schemaType('nonStandardRates').documentId('nonStandardRates').title('Non-Standard'),
-                ),
+              // S.listItem()
+              //   .icon(GolfIcon)
+              //   .title('Non-Standard')
+              //   .child(
+              //     S.document().schemaType('nonStandardRates').documentId('nonStandardRates').title('Non-Standard'),
+              //   ),
             ]),
         ),
       S.listItem()
@@ -81,7 +81,7 @@ export const deskStructure = (S, context) =>
               createBulkActionsTable({ type: 'events', S, context, title: 'Manage', icon: TrashIcon }),
             ]),
         ),
-      S.listItem().icon(NewspaperIcon).title('News').child(S.documentTypeList('news').title('News Items')),
+      // S.listItem().icon(NewspaperIcon).title('News').child(S.documentTypeList('news').title('News Items')),
       S.listItem()
         .icon(UserListIcon)
         .title('Home Page')

@@ -26,7 +26,7 @@ Font base styles
     @apply text-[2rem] sm:text-[2.375rem] md:text-[2.75rem] xl:text-[3rem];
   }
   h3 {
-    @apply text-[1.35rem] sm:text-[1.425rem] md:text-[1.5rem] xl:text-[1.5625rem];
+    @apply text-[1.35rem] sm:text-[1.425rem] md:text-[1.5rem] xl:text-[1.5625rem] text-bushwood-900;
   }
   h4 {
     @apply text-[1.5rem];
