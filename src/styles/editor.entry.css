@@ -1,0 +1,13 @@
+/*
+  Bushwood TinyMCE Editor Styles — Source File
+  DO NOT EDIT public/editor.css directly.
+  Edit this file (or any imported file below); npm run editor-css compiles to public/editor.css.
+  During development this runs automatically via npm run dev.
+*/
+
+@import 'tailwindcss';
+
+@import './variables.css';
+@import './typography.css';
+@import './base.css';
+@import './common.css';

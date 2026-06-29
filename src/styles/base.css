@@ -1,0 +1,73 @@
+/* =========================
+Font base styles
+=========================== */
+@layer base {
+  body {
+    background-color: white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-[600] text-secondary dark:text-accent;
+  }
+  h1,
+  h2 {
+    @apply tracking-[-1.5px] leading-[1.2] text-bushwood-900;
+  }
+
+  h1 {
+    @apply text-heading-4 sm:text-heading-3 md:text-heading-2 xl:text-heading-1;
+  }
+  h2 {
+    @apply text-[2rem] sm:text-[2.375rem] md:text-[2.75rem] xl:text-[3rem];
+  }
+  h3 {
+    @apply text-[1.35rem] sm:text-[1.425rem] md:text-[1.5rem] xl:text-[1.5625rem];
+  }
+  h4 {
+    @apply text-[1.5rem];
+  }
+  h5 {
+    @apply text-heading-5;
+  }
+  h6 {
+    @apply text-heading-6;
+  }
+  body > :not(h1, h2, h3, h4, h5, h6) {
+    font-variation-settings:
+      'INKT' 0,
+      'wght' 500,
+      'wdth' 0, 
+      'slnt' 0;
+      letter-spacing: -.15px !important;
+  }
+  strong {
+    font-variation-settings:
+      'wght' 725;
+  }
+  p {
+    @apply off-black text-[15px] dark:text-accent/90 font-[400];
+  }
+  /* ul,ol {
+    @apply pb-5;
+  } */
+  hr {
+    border: none;
+    background-color: #dbdbdb;
+    height: 1px;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0;
+    display: block;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-bushwood-600);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,47 @@
+/* =========================
+Default Body and Typography styles
+=========================== */
+
+body {
+  @apply font-body font-medium antialiased [&_>_:not(h1,h2,h3,h4,h5,h6)]:tracking-[-.25px] [&_>_:not(h1,h2,h3,h4,h5,h6)]:font-[400];
+ 
+}
+
+@font-face {
+  font-family: 'aa00';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/aa00.otf') format("opentype");
+}
+
+/* =========================
+Avenir Next — heading font
+=========================== */
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/avenir-next-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/avenir-next-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/avenir-next-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/avenir-next-700.woff2') format('woff2');
+}

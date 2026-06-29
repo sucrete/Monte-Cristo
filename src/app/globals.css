@@ -1,0 +1,40 @@
+@import url('https://use.typekit.net/wmg6bok.css');
+@import 'tailwindcss';
+
+/* Safelist utilities used in CMS-managed HTML (Sanity content not scanned at build time) */
+@source inline("flex flex-col flex-row flex-wrap items-start items-center items-end justify-start justify-center justify-end justify-between gap-1 gap-2 gap-3 gap-4 gap-5 gap-6 gap-8 gap-10 gap-12 gap-16 grid grid-cols-1 grid-cols-2 grid-cols-3 grid-cols-4 sm:grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 sm:grid-cols-4 md:flex-row md:w-1/2 md:w-1/3 md:w-2/3 space-y-1 space-y-2 space-y-3 space-y-4 space-y-5 space-y-6 space-y-8");
+@source inline("p-1 p-2 p-3 p-4 p-5 p-6 p-8 p-10 p-12 p-16 px-2 px-4 px-6 px-8 px-10 px-12 py-2 py-4 py-6 py-8 py-10 py-12 py-16 pt-1 pt-2 pt-4 pb-1 pb-2 pb-3 pb-4 pl-4 pl-6 pr-4 pr-6 mx-auto my-2 my-4 my-8 mt-0.5 mt-1 mt-2 mt-3 mt-4 mt-6 mt-8 mt-10 mb-1 mb-2 mb-3 mb-4 mb-6 mb-8");
+@source inline("text-xs text-sm text-base text-lg text-xl text-2xl text-3xl text-4xl text-5xl font-normal font-medium font-semibold font-bold leading-none leading-tight leading-snug leading-normal leading-relaxed tracking-tight tracking-wide tracking-wider tracking-widest text-center text-left text-right uppercase lowercase capitalize");
+@source inline("text-white text-black text-gray-400 text-gray-500 text-gray-600 text-gray-700 text-gray-800 text-gray-900 text-blue-400 text-blue-500 text-blue-600 text-blue-700 text-green-400 text-green-500 text-green-600 text-red-400 text-red-500 text-red-600 text-yellow-400 text-yellow-500");
+@source inline("bg-white bg-black bg-gray-50 bg-gray-100 bg-gray-200 bg-gray-300 bg-gray-400 bg-gray-500 bg-blue-50 bg-blue-100 bg-blue-500 bg-green-50 bg-green-100 bg-green-500");
+@source inline("rounded rounded-sm rounded-md rounded-lg rounded-xl rounded-2xl rounded-3xl rounded-full border border-gray-200 border-gray-300");
+@source inline("shadow-sm shadow shadow-md shadow-lg shadow-xl");
+@source inline("w-4 w-5 w-6 w-8 w-10 w-12 w-16 w-20 w-24 w-32 w-48 w-64 w-full w-auto h-4 h-5 h-6 h-8 h-10 h-12 h-16 h-20 h-24 h-32 h-48 h-64 h-full h-auto max-w-xs max-w-sm max-w-md max-w-lg max-w-xl max-w-2xl max-w-3xl max-w-4xl max-w-5xl max-w-6xl max-w-7xl max-w-full");
+@source inline("shrink-0 overflow-hidden object-cover object-center block inline-block hidden");
+@source inline("list-none list-disc list-decimal");
+
+/* vendors css will be added here */
+
+@import '../styles/variables.css';
+@import '../styles/icon-font.css';
+@import '../styles/typography.css';
+@import '../styles/common.css';
+@import '../styles/base.css';
+@import '../styles/button.css';
+@import '../styles/badge.css';
+@import '../styles/header.css';
+@import '../styles/custom-swiper.css';
+@import '../styles/number-animation.css';
+@import '../styles/lenis.css';
+@import '../styles/masonry.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
