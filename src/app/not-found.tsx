@@ -52,7 +52,6 @@ const NotFound = () => {
           </div>
         </section>
       </main>
-      <FooterThree />
     </Fragment>
   );
 };
