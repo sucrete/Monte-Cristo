@@ -11,7 +11,7 @@ import MobileMenuButton from './MobileMenuButton';
 import NavCTAButton from './NavCTAButton';
 import NavItemLink from './NavItemLink';
 
-import Azteca from './Azteca';
+import { Azteca } from './Azteca';
 
 interface NavbarFourProps {
   className?: string;

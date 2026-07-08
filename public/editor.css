@@ -331,12 +331,6 @@
   .-top-\[10px\] {
     top: calc(10px * -1);
   }
-  .-top-\[11px\] {
-    top: calc(11px * -1);
-  }
-  .-top-\[16px\] {
-    top: calc(16px * -1);
-  }
   .-top-\[45\%\] {
     top: calc(45% * -1);
   }
@@ -367,26 +361,11 @@
   .top-\[4\.5px\] {
     top: 4.5px;
   }
-  .top-\[5px\] {
-    top: 5px;
-  }
-  .top-\[10px\] {
-    top: 10px;
-  }
   .top-\[11\.5px\] {
     top: 11.5px;
   }
   .top-\[25px\] {
     top: 25px;
-  }
-  .top-\[32px\] {
-    top: 32px;
-  }
-  .top-\[40px\] {
-    top: 40px;
-  }
-  .top-\[45px\] {
-    top: 45px;
   }
   .top-\[50\%\] {
     top: 50%;
@@ -397,14 +376,8 @@
   .top-\[55px\] {
     top: 55px;
   }
-  .top-\[75px\] {
-    top: 75px;
-  }
   .top-\[90\%\] {
     top: 90%;
-  }
-  .top-\[95px\] {
-    top: 95px;
   }
   .top-full {
     top: 100%;
@@ -1121,14 +1094,8 @@
   .w-\[100\%\] {
     width: 100%;
   }
-  .w-\[100px\] {
-    width: 100px;
-  }
   .w-\[150px\] {
     width: 150px;
-  }
-  .w-\[175px\] {
-    width: 175px;
   }
   .w-\[180px\] {
     width: 180px;
@@ -1139,14 +1106,8 @@
   .w-\[375px\] {
     width: 375px;
   }
-  .w-\[1200px\] {
-    width: 1200px;
-  }
   .w-\[1300px\] {
     width: 1300px;
-  }
-  .w-\[2083px\] {
-    width: 2083px;
   }
   .w-\[clamp\(220px\,28vw\,400px\)\] {
     width: clamp(220px, 28vw, 400px);
@@ -2406,9 +2367,6 @@
   .pt-2 {
     padding-top: calc(var(--spacing) * 2);
   }
-  .pt-3 {
-    padding-top: calc(var(--spacing) * 3);
-  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
@@ -3193,11 +3151,6 @@
   }
   .transition-\[opacity\,scale\,top\] {
     transition-property: opacity,scale,top;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .transition-\[opacity\,top\] {
-    transition-property: opacity,top;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
@@ -4221,11 +4174,6 @@
   .max-\[640px\]\:scale-\[1\.2\] {
     @media (width < 640px) {
       scale: 1.2;
-    }
-  }
-  .max-\[640px\]\:scale-\[1\.41\] {
-    @media (width < 640px) {
-      scale: 1.41;
     }
   }
   .max-\[640px\]\:scale-\[1\] {
