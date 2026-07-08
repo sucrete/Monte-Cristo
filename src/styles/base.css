@@ -23,7 +23,7 @@ Font base styles
     @apply text-heading-4 sm:text-heading-3 md:text-heading-2 xl:text-heading-1;
   }
   h2 {
-    @apply text-[2rem] sm:text-[2.375rem] md:text-[2.75rem] xl:text-[3rem];
+    @apply text-[2.5rem] md:text-[2.75rem] xl:text-[3rem];
   }
   h3 {
     @apply text-[1.35rem] sm:text-[1.425rem] md:text-[1.5rem] xl:text-[1.5625rem] text-bushwood-900;
@@ -50,7 +50,7 @@ Font base styles
       'wght' 725;
   }
   p {
-    @apply off-black text-[15px] dark:text-accent/90 font-[400];
+    @apply off-black text-[14px] md:text-[15px] dark:text-accent/90 font-[400];
   }
   /* ul,ol {
     @apply pb-5;

@@ -54,7 +54,7 @@ const NavbarFour = ({
         )}>
         <Azteca
           className={cn(
-            'absolute left-1/2 -top-[16px] -translate-x-1/2 w-[2083px] duration-500 transition-opacity',
+            'azteca absolute left-1/2 md:-top-[16px] -translate-x-1/2 -top-[10px] w-[1300px] md:w-[2083px] duration-500 transition-opacity',
             isScrolled ? 'opacity-100' : 'opacity-0',
           )}
         />
@@ -92,7 +92,10 @@ const NavbarFour = ({
               />
               {/* mobile menu btn */}
               <MobileMenuButton
-                className={cn(isScrolled ? 'py-4' : 'py-0')}
+                className={cn(
+                  ' duration-400 transition-transform',
+                  isScrolled ? 'py-2 max-[640px]:translate-y-[-4.5px]' : 'py-0 max-[640px]:translate-y-[0px]',
+                )}
                 hamburgerClassName={cn(dark ? 'text-[#070b10]' : 'text-white sm:text-[#070b10]')}
               />
             </div>

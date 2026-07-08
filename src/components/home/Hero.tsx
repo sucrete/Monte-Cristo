@@ -19,7 +19,7 @@ const Hero = async () => {
   return (
     // saved classNames ->  h-[99svh] xl:max-h-[90svh]
     <section className="bg-cover bg-top bg-no-repeat relative z-20 h-[600px] md:h-[850px]">
-      <ParallaxImageBackground src="/images/home/mc-hero-image.webp" offset="-12%" height="100%" />
+      <ParallaxImageBackground src="/images/home/hero-image.webp" offset="-12%" height="110%" />
       <div className="top-0 left-0 absolute h-[100%] w-[100%] opacity-80 -z-1 bg-scrim-hero"></div>
       <div className="facebook-link absolute left-6 md:left-[6.25rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.8} direction="left" offset={5}>
@@ -67,10 +67,10 @@ const Hero = async () => {
         </RevealAnimation>
       </div>
       <div className="main-container absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[90vw] md:min-w-[1290px]">
-        <div className="text-center md:space-y-4 space-y-5">
+        <div className="text-center space-y-2 md:space-y-4 ">
           <RevealAnimation delay={0.3} offset={10}>
             <div className="flex justify-center text-center text-accent">
-              <Image className="-mb-1" src={WelcomeTo} width={130} height={70} alt="" />
+              <Image className="md:-mb-1 w-[86px] md:w-[130px]" src={WelcomeTo} width={130} height={70} alt="" />
               {/* Welcome to */}
             </div>
           </RevealAnimation>
@@ -80,7 +80,7 @@ const Hero = async () => {
               {/* 2. The Real Heading (Visible Gradient) */}
 
               <h1
-                className="hero-heading text-[28px] sm:text-[3rem] md:text-[3.5rem] -tracking-[.5px] font-[600] pb-[0.25em] -mb-[0.25em] leading-[1.1]"
+                className="hero-heading text-[28px] sm:text-[3rem] md:text-[3.5rem] -tracking-[.5px] font-[600] md:pb-[0.25em] -mb-[0.25em] leading-[1.1]"
                 style={{
                   background: '#ffffff',
                   backgroundImage:

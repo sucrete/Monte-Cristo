@@ -13,6 +13,7 @@ import {
   MoonIcon,
   GolfIcon,
   UserListIcon,
+  HouseIcon,
   TrashIcon,
 } from '@phosphor-icons/react';
 import { createBulkActionsTable } from 'sanity-plugin-bulk-actions-table';
@@ -83,7 +84,7 @@ export const deskStructure = (S, context) =>
         ),
       // S.listItem().icon(NewspaperIcon).title('News').child(S.documentTypeList('news').title('News Items')),
       S.listItem()
-        .icon(UserListIcon)
+        .icon(HouseIcon)
         .title('Home Page')
         .child(S.document().schemaType('instructors').documentId('instructors').title('Home Page')),
       // ⬇⬇⬇ singlet structure ⬇⬇⬇

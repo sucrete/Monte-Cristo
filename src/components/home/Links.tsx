@@ -55,7 +55,7 @@ const LinkCard = ({ linkItem }: LinkCardProps) => {
   return (
     <Link href={linkItem.URL} className="block group">
       <div
-        className={`card-body w-full h-[160px] md:h-[175px] lg:h-[175px] xl:h-[150px] rounded-[15px] relative overflow-hidden cursor-pointer realistic-shadow ${HOVER_DURATION}`}
+        className={`card-body w-full h-[135px] md:h-[175px] lg:h-[175px] xl:h-[150px] rounded-[15px] relative overflow-hidden cursor-pointer realistic-shadow ${HOVER_DURATION}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {/* LAYER 1: Background Image & Dark Overlay */}
@@ -104,12 +104,12 @@ const Links = () => {
   );
   return (
     // THE SECTION BACKGROUND
-    <section className="py-16 md:py-20 lg:py-[70px] xl:py-[80px] relative bg-[#fafafa] bg-size-[60%] bg-center bg-no-repeat transition-colors duration-250">
+    <section className="py-6 md:py-20 lg:py-[70px] xl:py-[80px] relative bg-[#fafafa] bg-size-[60%] bg-center bg-no-repeat transition-colors duration-250">
       {/* <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_150%_100%_at_50%_30%,transparent_0%,#fafafa_90%)]"></div> */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-16 ">
         {/* THE LINKS CONTAINER */}
-        <div ref={ref} className="rounded-[32px] overflow-hidden p-6 transition-colors duration-250">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-6">
+        <div ref={ref} className="rounded-[27px] md:rounded-[32px] overflow-hidden p-4 md:p-6 transition-colors duration-250">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
             {IntrasiteLinks.map((linkItem, index) => (
               <RevealAnimation key={linkItem.id} delay={index * 0.1}>
                 <div className="w-full">

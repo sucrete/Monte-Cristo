@@ -13,15 +13,16 @@ const LogoBox = ({ isScrolled }: BushwoodLogoBoxProps) => {
   return (
     <div
       className={cn(
-        'absolute transition-[width] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[175px] sm:w-[200px]  duration-400',
+        'absolute transition-[width] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] sm:w-[200px] duration-400',
         isScrolled ? 'md:w-[300px]' : 'md:w-[270px]',
       )}>
-      <Link href="/">
+      <Link className="w-fit" href="/">
         <span className="sr-only">Home</span>
         <figure className="relative">
+          {/* 🟨 FULL LOGO 🟨 */}
           <Image
             className={cn(
-              'duration-300 transition-opacity absolute top-[45px] left-1/2 -translate-x-1/2 -translate-y-1/2',
+              'duration-300 transition-opacity absolute top-[25px] md:top-[45px] left-1/2 -translate-x-1/2 -translate-y-1/2',
               isScrolled ? 'opacity-0' : 'opacity-100',
             )}
             src={MCLogo}
@@ -29,10 +30,11 @@ const LogoBox = ({ isScrolled }: BushwoodLogoBoxProps) => {
             height={400}
             alt=""
           />
+          {/* 🟨 PLAQUE LOGO 🟨 */}
           <Image
             className={cn(
-              'duration-400 transition-[opacity,top] absolute top-[95px] left-1/2 -translate-x-1/2 -translate-y-1/2',
-              isScrolled ? 'opacity-100 top-[10px]' : 'opacity-0',
+              'duration-400 transition-[opacity,scale,top] absolute top-[55px] left-1/2 -translate-x-1/2 -translate-y-1/2',
+              isScrolled ? 'opacity-100 top-[0px] md:top-[10px] max-[640px]:scale-[1.2]' : 'opacity-0 max-[640px]:scale-[1]',
             )}
             src={MCLogoPlaque}
             width={400}
