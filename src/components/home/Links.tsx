@@ -15,8 +15,8 @@ gsap.registerPlugin(ScrollTrigger);
 const IntrasiteLinks = [
   {
     id: 1,
-    URL: '/greens-fees',
-    text: 'Greens Fees',
+    URL: '/contact',
+    text: 'Contact',
     imgURL: 'images/home/monte-cristo/mc-squad.jpg',
   },
   {

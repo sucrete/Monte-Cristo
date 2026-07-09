@@ -160,12 +160,12 @@ export const pagesMegaMenuColumns: MegaMenuColumn[] = [
 
 //* Split menu
 export const splitMenuLeft: NavigationItem[] = [
-  {
-    id: 'greens-fees',
-    label: 'Greens Fees',
-    href: '/greens-fees',
-    hasDropdown: false,
-  },
+  // {
+  //   id: 'greens-fees',
+  //   label: 'Greens Fees',
+  //   href: '/greens-fees',
+  //   hasDropdown: false,
+  // },
   {
     id: 'events',
     label: 'Events',

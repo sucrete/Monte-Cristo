@@ -50,7 +50,7 @@ const WeatherModule = async () => {
           <div className="weather text-[13px] flex flex-row items-center">
             <span className="flex text-ns-green">{label}</span>
             <span className="today-weather-icon-box size-[15px] inline-block ml-3">
-              <CurrentIcon className="fill-ns-green h-fit w-fit" />
+              <CurrentIcon className="fill-ns-green size-[15px]" />
             </span>
           </div>
           <div className="today-temperature text-[1.5rem] leading-[.75] block text-ns-green">
