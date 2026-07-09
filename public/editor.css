@@ -355,6 +355,9 @@
   .top-\[-17px\] {
     top: -17px;
   }
+  .top-\[-24px\] {
+    top: -24px;
+  }
   .top-\[0px\] {
     top: 0px;
   }
@@ -402,6 +405,9 @@
   }
   .right-\[5px\] {
     right: 5px;
+  }
+  .right-\[8px\] {
+    right: 8px;
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
@@ -2224,6 +2230,12 @@
   .p-\[2\.25rem_2\.25rem_3rem_2\.25rem\] {
     padding: 2.25rem 2.25rem 3rem 2.25rem;
   }
+  .p-\[15px\] {
+    padding: 15px;
+  }
+  .p-\[17px\] {
+    padding: 17px;
+  }
   .p-\[20px\] {
     padding: 20px;
   }
@@ -2492,6 +2504,9 @@
   }
   .pb-\[7rem\] {
     padding-bottom: 7rem;
+  }
+  .pb-\[14px\] {
+    padding-bottom: 14px;
   }
   .pb-\[100px\] {
     padding-bottom: 100px;

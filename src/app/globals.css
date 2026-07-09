@@ -25,7 +25,6 @@
 @import '../styles/header.css';
 @import '../styles/custom-swiper.css';
 @import '../styles/number-animation.css';
-@import '../styles/lenis.css';
 @import '../styles/masonry.css';
 
 @custom-variant dark (&:where(.dark, .dark *));

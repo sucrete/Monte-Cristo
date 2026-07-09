@@ -11,7 +11,7 @@ import MobileMenuButton from './MobileMenuButton';
 import NavCTAButton from './NavCTAButton';
 import NavItemLink from './NavItemLink';
 
-import { Azteca } from './Azteca';
+import { Azteca, PATH_TWO } from './Azteca';
 
 interface NavbarFourProps {
   className?: string;
@@ -53,6 +53,7 @@ const NavbarFour = ({
           className,
         )}>
         <Azteca
+          path={PATH_TWO}
           className={cn(
             'azteca absolute left-1/2 md:-top-[16px] -translate-x-1/2 -top-[10px] w-[1300px] md:w-[2083px] duration-500 transition-opacity',
             isScrolled ? 'opacity-100' : 'opacity-0',

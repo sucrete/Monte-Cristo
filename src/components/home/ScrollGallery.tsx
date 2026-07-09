@@ -2,6 +2,11 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BASE = '/images/home/monte-cristo';
 
@@ -32,46 +37,50 @@ const ROW_TWO: GalleryImage[] = [
   { src: `${BASE}/sunset-2.webp`, alt: 'Golden sunset over the course' },
 ];
 
-const clamp = (v: number, min: number, max: number) => Math.min(Math.max(v, min), max);
-
 const ScrollGallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const trackOneRef = useRef<HTMLDivElement>(null);
   const trackTwoRef = useRef<HTMLDivElement>(null);
   const [lightbox, setLightbox] = useState<GalleryImage | null>(null);
 
-  // Scroll-driven horizontal parallax — mirrors the Deer Chase skrollr keyframes:
-  //   row 1: translateX -40% -> -25%   (slides right as you scroll down)
-  //   row 2: translateX -35% -> -50%   (slides left, opposite direction)
-  useEffect(() => {
+  useGSAP(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let raf = 0;
+    if (reduceMotion) {
+      gsap.set(trackOneRef.current, { x: '-32.5%' });
+      gsap.set(trackTwoRef.current, { x: '-42.5%' });
+      return;
+    }
 
-    const update = () => {
-      raf = 0;
-      const el = sectionRef.current;
-      if (!el) return;
-      const vh = window.innerHeight || document.documentElement.clientHeight;
-      const rect = el.getBoundingClientRect();
-      // p = 0 when the section's top hits the viewport bottom, 1 when its bottom hits the viewport top.
-      const p = reduceMotion ? 0.5 : clamp((vh - rect.top) / (vh + rect.height), 0, 1);
-      if (trackOneRef.current) trackOneRef.current.style.transform = `translate3d(${-40 + 15 * p}%, 0, 0)`;
-      if (trackTwoRef.current) trackTwoRef.current.style.transform = `translate3d(${-35 - 15 * p}%, 0, 0)`;
-    };
+    // Row 1: slides right as you scroll (-40% → -25%)
+    gsap.fromTo(trackOneRef.current,
+      { x: '-40%' },
+      {
+        x: '-25%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      }
+    );
 
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, []);
+    // Row 2: slides left, opposite direction (-35% → -50%)
+    gsap.fromTo(trackTwoRef.current,
+      { x: '-35%' },
+      {
+        x: '-50%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      }
+    );
+  }, { scope: sectionRef });
 
   // Close the lightbox on Escape
   useEffect(() => {

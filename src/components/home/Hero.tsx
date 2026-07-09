@@ -49,7 +49,7 @@ const Hero = async () => {
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
         <RevealAnimation delay={0.7} direction="right" offset={5}>
           <div className="overflow-hidden w-[180px] h-fit rounded-lg border-1 border-[#ffffff30] backdrop-blur-xl bg-[#ffffff1a] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_30px_rgba(236,236,236,0.18)]">
-            <div className="temp-wrapper text-center p-[20px] w-fit">
+            <div className="temp-wrapper text-center p-[17px] w-fit">
               <div className="monospaced weather text-[#ffffff] pb-1 text-[10px]">{label}</div>
               <div className="temperature font-body flex justify-center text-accent mr-[-3px]">
                 <span className="text-[40px] semibold leading-[1] tracking-[1.5px]">{currentTemp}</span>{' '}
@@ -58,7 +58,7 @@ const Hero = async () => {
             </div>
             <Image
               src={'/images/home/edinburgTX.svg'}
-              className="absolute right-[5px] top-[-17px] z-2 size-[105px]"
+              className="absolute right-[8px] top-[-24px] z-2 size-[105px]"
               alt=""
               width={125}
               height={100}
