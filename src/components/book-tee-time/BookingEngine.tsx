@@ -3,7 +3,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 const BookingEngine = () => {
   return (
     <section>
-      <div className="main-container py-[10rem]">
+      <div className="main-container py-5 md:py-[10rem]">
         <RevealAnimation delay={0.3}>
           <iframe
             src="https://bookateetime.teequest.com/course/137"

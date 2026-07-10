@@ -391,89 +391,97 @@ table {
 }
 
 /* FullCalendar header bar */
-.fc-header-toolbar {
-  .fc-toolbar-chunk {
-    .fc-toolbar-title {
-      font-size: 47px;
+.fc {
+  .fc-toolbar.fc-header-toolbar {
+    @apply relative md:mb-[3.5rem];
+  }
+  .fc-header-toolbar {
+    .fc-toolbar-chunk:nth-of-type(2) {
+      @apply absolute center-it;
+      .fc-toolbar-title {
+        @apply absolute left-1/2 -translate-x-1/2 -translate-y-[80px] md:-translate-y-1/2 md:top-1/2 w-[400px] text-center  text-[47px];
+      }
     }
-    &:last-of-type {
-      display: flex;
-    }
+    .fc-toolbar-chunk {
+      &:last-of-type {
+        display: flex;
+      }
 
-    button,
-    .fc-button-group {
-      @apply monospaced;
-      background: white;
-      color: black;
-      .fc-button {
-        min-height: 34px;
-        /* -webkit-text-stroke-width: 0.25px; */
-        box-shadow: none;
+      button,
+      .fc-button-group {
+        @apply monospaced;
+        background: white;
+        color: black;
+        .fc-button {
+          min-height: 34px;
+          /* -webkit-text-stroke-width: 0.25px; */
+          box-shadow: none;
+          &:hover {
+            color: inherit;
+            background: #f4f4f4;
+          }
+          &:first-of-type {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+          }
+          &:last-of-type {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+          }
+          &.fc-button-active {
+            background: rgb(247, 247, 247);
+
+            border: 1px solid #ddd;
+            box-shadow: none;
+            color: inherit;
+          }
+        }
+      }
+      button {
+        border: 1px solid #ddd;
+        transition: all 0.25s ease;
+
         &:hover {
           color: inherit;
           background: #f4f4f4;
         }
-        &:first-of-type {
-          border-top-left-radius: 12px;
-          border-bottom-left-radius: 12px;
-        }
-        &:last-of-type {
-          border-top-right-radius: 12px;
-          border-bottom-right-radius: 12px;
-        }
-        &.fc-button-active {
-          background: rgb(247, 247, 247);
-
+        &.fc-today-button {
+          padding-left: 15px;
+          padding-right: 15px;
+          box-shadow: 0 1px 2px 0 #0000000d;
           border: 1px solid #ddd;
-          box-shadow: none;
-          color: inherit;
+          border-radius: 12px;
+
+          background: #fffbca;
+          &:hover {
+            background: #fffbca;
+            border: 1px solid #ddd;
+          }
+          &[disabled] {
+            pointer-events: none;
+            opacity: 0;
+          }
+          &:active,
+          &:focus {
+            border: 1px solid #ddd;
+            background-color: transparent;
+            background: #fffbca;
+            /* box-shadow: 0 1px 2px 0 #0000000d; */
+          }
         }
       }
-    }
-    button {
-      border: 1px solid #ddd;
-      transition: all 0.25s ease;
-
-      &:hover {
-        color: inherit;
-        background: #f4f4f4;
-      }
-      &.fc-today-button {
-        padding-left: 15px;
-        padding-right: 15px;
-        box-shadow: 0 1px 2px 0 #0000000d;
-        border: 1px solid #ddd;
+      .fc-button-group {
         border-radius: 12px;
-
-        background: #fffbca;
-        &:hover {
-          background: #fffbca;
-          border: 1px solid #ddd;
-        }
-        &[disabled] {
-          pointer-events: none;
-          opacity: 0;
-        }
-        &:active,
-        &:focus {
-          border: 1px solid #ddd;
-          background-color: transparent;
-          background: #fffbca;
-          /* box-shadow: 0 1px 2px 0 #0000000d; */
-        }
-      }
-    }
-    .fc-button-group {
-      border-radius: 12px;
-      box-shadow: 0 1px 2px 0 #0000000d;
-      button {
-        padding-left: 15px;
-        padding-right: 15px;
-        &:active,
-        &:hover,
-        &:focus {
-          box-shadow: none;
-          border: 1px solid #ddd;
+        box-shadow: 0 1px 2px 0 #0000000d;
+        button {
+          padding-left: 15px;
+          padding-right: 15px;
+          &:active,
+          &:hover,
+          &:focus {
+            box-shadow: none;
+            border: 1px solid #ddd;
+          }
         }
       }
     }

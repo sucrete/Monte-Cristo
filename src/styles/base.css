@@ -42,13 +42,15 @@ Font base styles
     font-variation-settings:
       'INKT' 0,
       'wght' 500,
-      'wdth' 0, 
+      'wdth' 0,
       'slnt' 0;
-      letter-spacing: -.15px !important;
+    letter-spacing: -0.15px !important;
   }
   strong {
-    font-variation-settings:
-      'wght' 725;
+    font-variation-settings: 'wght' 725;
+  }
+  a {
+    @apply text-[14px] md:text-[15px] font-[400];
   }
   p {
     @apply off-black text-[14px] md:text-[15px] dark:text-accent/90 font-[400];

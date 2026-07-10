@@ -20,8 +20,8 @@ const Contact = () => {
       <main>
         <HalfHero
           BGHeroSrc="/images/hero-images/view-with-a-bridge.webp"
-          imageOffset="-60%"
-          imageHeight="190%"
+          imageOffset="-50%"
+          imageHeight="150%"
           overlayOpacity=".55"
           heroText="Contact Us"
         />

@@ -24,7 +24,7 @@ const Course = async () => {
       <main>
         <HalfHero
           BGHeroSrc="/images/hero-images/nice-vista.webp"
-          imageOffset="-55%"
+          imageOffset="-30%"
           imageHeight="150%"
           overlayOpacity=".75"
           heroText="Events"

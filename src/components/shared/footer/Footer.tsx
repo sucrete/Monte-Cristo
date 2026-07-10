@@ -44,7 +44,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                     <Image className="size-6" src={instagram} alt="Instagram" />
                   </Link> */}
                 </div>
-                <p className="text-accent/60 text-tagline-1 mt-4 ">Open 7 days a week, 7am - 7pm.</p>
+                <p className="text-accent/60 mt-4 ">Open 7 days a week, 7am - 7pm.</p>
               </div>
             </RevealAnimation>
             <RevealAnimation delay={0.45} offset={5}>
@@ -58,11 +58,11 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
               </div>
             </RevealAnimation>
           </div>
-          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-8 xl:col-span-8">
+          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-16 md:gap-y-8 xl:col-span-8">
             <div className="col-span-12 md:col-span-4">
               <RevealAnimation delay={0.4}>
                 <div className="space-y-3 flex flex-col items-center md:items-start">
-                  <p className=" text-tagline-1  text-accent/60  ">Pages</p>
+                  <p className="text-accent/60  ">Pages</p>
                   <ul className="space-y-0 text-center md:text-left">
                     <li>
                       <Link href="/greens-fees" className="footer-link">
@@ -89,12 +89,12 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
               </RevealAnimation>
 
               <RevealAnimation delay={0.45}>
-                <p className=" text-tagline-1  text-accent/60  pt-[30px] pb-3">Address</p>
-                <div className=" flex flex-col ">
+                <p className="text-accent/60  pt-[30px] pb-3 text-center md:text-left">Address</p>
+                <div className=" flex flex-col items-center md:items-start">
                   <Link
                     target="_blank"
                     href="https://maps.app.goo.gl/VzbGNTavcvsF2Zjt8"
-                    className="text-accent hover:text-accent/80 duration-250 decoration-none inline-block">
+                    className="text-accent hover:text-accent/80 duration-250 decoration-none inline-block text-center md:text-left">
                     2919 N Kenyon Rd
                     <br />
                     Edinburg, TX 78542
@@ -111,7 +111,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
 
               <div className="flex flex-col space-y-3 text-center md:text-right pt-[3rem]">
                 <RevealAnimation delay={0.7} offset={5} start="top 105%">
-                  <p className="text-tagline-1 text-accent/60">
+                  <p className="text-accent/60">
                     <a
                       href="/studio"
                       className="text-accent/60 hover:text-accent duration-250 decoration-none"
@@ -124,7 +124,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                 <RevealAnimation delay={0.75} offset={5} start="top 105%">
                   <div className="TQS-attribution-wrapper flex flex-row justify-center md:justify-end">
                     <TQSGears />
-                    <p className="text-tagline-1 text-accent/60">Powered by TeeQuest</p>
+                    <p className="text-accent/60">Powered by TeeQuest</p>
                   </div>
                 </RevealAnimation>
               </div>

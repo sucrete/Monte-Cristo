@@ -20,7 +20,7 @@ const BookTeeTime = () => {
         <HalfHero
           BGHeroSrc="/images/hero-images/putter-extraordinaire.webp"
           imageOffset="-20%"
-          imageHeight="200%"
+          imageHeight="120%"
           overlayOpacity=".55"
           heroText="Book Tee Time"
         />

@@ -19,7 +19,7 @@ const Hero = async () => {
   return (
     // saved classNames ->  h-[99svh] xl:max-h-[90svh]
     <section className="bg-cover bg-top bg-no-repeat relative z-20 h-[600px] md:h-[850px]">
-      <ParallaxImageBackground src="/images/home/hero-image.webp" offset="-12%" height="110%" />
+      <ParallaxImageBackground src="/images/home/hero-image.webp" offset="-20%" height="140%" />
       <div className="top-0 left-0 absolute h-[100%] w-[100%] opacity-80 -z-1 bg-scrim-hero"></div>
       <div className="facebook-link absolute left-6 md:left-[6.25rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.8} direction="left" offset={5}>
@@ -48,7 +48,9 @@ const Hero = async () => {
       <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
         <RevealAnimation delay={0.7} direction="right" offset={5}>
-          <div className="overflow-hidden w-[180px] h-fit rounded-lg border-1 border-[#ffffff30] backdrop-blur-xl bg-[#ffffff1a] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_30px_rgba(236,236,236,0.18)]">
+          <div
+            className="overflow-hidden w-[180px] h-fit rounded-lg border-1 border-[#ffffff30] backdrop-blur-xl bg-[#ffffff1a]"
+            style={{ boxShadow: 'rgba(0,0,0,0.08) 0px 20px 25px -5px, rgba(0,0,0,0.02) 0px 10px 10px -5px, inset 0 0 20px rgba(236,236,236,0.2)' }}>
             <div className="temp-wrapper text-center p-[17px] w-fit">
               <div className="monospaced weather text-[#ffffff] pb-1 text-[10px]">{label}</div>
               <div className="temperature font-body flex justify-center text-accent mr-[-3px]">
@@ -58,7 +60,7 @@ const Hero = async () => {
             </div>
             <Image
               src={'/images/home/edinburgTX.svg'}
-              className="absolute right-[8px] top-[-24px] z-2 size-[105px]"
+              className="absolute right-[8px] top-[-20px] z-2 size-[105px]"
               alt=""
               width={125}
               height={100}

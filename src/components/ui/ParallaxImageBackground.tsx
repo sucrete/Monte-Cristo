@@ -8,22 +8,29 @@ export default function ParallaxImageBackground({
   src,
   alt = '',
   height = '120%',
-  offset = '-10%',
+  offset = '-10',
+  travel = 30,
 }: any) {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
 
+  const offsetNum = parseFloat(offset);
+
   useGSAP(() => {
-    gsap.to(imageRef.current, {
-      yPercent: 20, // Move the image 20% down
-      ease: 'none',
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top bottom', // Start when top of container hits bottom of viewport
-        end: 'bottom top',   // End when bottom of container hits top of viewport
-        scrub: true,         // Syncs animation to native scrollbar
-      },
-    });
+    gsap.fromTo(
+      imageRef.current,
+      { yPercent: offsetNum },
+      {
+        yPercent: offsetNum + travel,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      }
+    );
   }, { scope: containerRef });
 
   return (
@@ -31,7 +38,7 @@ export default function ParallaxImageBackground({
       <div
         ref={imageRef}
         className="absolute inset-0 w-full"
-        style={{ height, transform: `translateY(${offset})`, willChange: 'transform' }}
+        style={{ height, willChange: 'transform' }}
       >
         <Image src={src} alt={alt} fill sizes="100vw" className="object-cover" priority />
       </div>

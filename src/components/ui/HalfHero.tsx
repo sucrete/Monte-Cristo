@@ -14,7 +14,7 @@ const HalfHero = ({
   heroText,
   BGHeroSrc = '/images/hero-images/aaa-golf-course-2.jpg',
   imageHeight = '120%',
-  imageOffset = '-10%',
+  imageOffset = '-10',
   overlayOpacity = '.7',
 }: HalfHeroProps) => {
   return (
@@ -25,7 +25,7 @@ const HalfHero = ({
       <div
         className="bg-scrim-top top-0 left-0 absolute h-[100%] w-[100%] -z-1"
         style={{ opacity: overlayOpacity }}></div>
-      <div className="mx-auto w-full px-25 max-w-[1920px] absolute bottom-5 z-5">
+      <div className="mx-auto w-full px-5 md:px-25 max-w-[1920px] absolute bottom-3 md:bottom-5 z-5">
         <RevealAnimation delay={0.1}>
           <div className="h1-wrapper">
             <div className="prophylactic">

@@ -44,7 +44,7 @@ const WeatherModule = async () => {
     : [] as ForecastDay[];
 
   return (
-    <div className="weather-container flex flex-row items-center pr-6 bg-[#001e18] p-2 ml-auto justify-between rounded-2xl">
+    <div className="weather-container flex flex-row items-center pr-6 bg-[#001712] md:bg-[#001e18] p-2 ml-auto justify-between rounded-2xl">
       <div className="today-weather-container basis-[45%] sm:basis-[35%] bg-[#01251e] text-accent flex flex-col px-6 py-4 rounded-[12px] items-center justify-between space-y-3 realistic-shadow-md border-1 border-[#66727012]">
         <div className="today-weather flex flex-col justify-between items-center space-y-3 w-full">
           <div className="weather text-[13px] flex flex-row items-center">
