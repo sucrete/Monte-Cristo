@@ -44,14 +44,14 @@ const ContactInfo = () => {
       <div className="main-container">
         <div className="space-y-[70px]">
           {/* heading  */}
-          <div className="max-w-[680px] mx-auto text-center space-y-3">
-            {/* <RevealAnimation delay={0.2}>
+          {/* <div className="max-w-[680px] mx-auto text-center space-y-3">
+            <RevealAnimation delay={0.2}>
               <div className="badge badge-coral text-[#b85800]">Connect with us</div>
-            </RevealAnimation> */}
+            </RevealAnimation>
             <RevealAnimation delay={0.3}>
               <h2>Need directions or a question answered? You're in the right place.</h2>
             </RevealAnimation>
-          </div>
+          </div> */}
           <div className="flex lg:items-stretch flex-col justify-center items-center gap-10 lg:flex-row lg:gap-8 xl:gap-10">
             {/* contact info cards  */}
             <div className="flex first-column flex-col gap-8 md:justify-between md:flex-row lg:flex-col">
