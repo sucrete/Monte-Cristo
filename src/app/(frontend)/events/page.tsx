@@ -23,10 +23,10 @@ const Course = async () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/hero-images/nice-vista.webp"
-          imageOffset="-30%"
+          BGHeroSrc="/images/hero-images/mc-squad-2.webp"
+          imageOffset="-40%"
           imageHeight="150%"
-          overlayOpacity=".75"
+          overlayOpacity=".15"
           heroText="Events"
         />
         <CalendarComponent eventsData={eventsData} />
