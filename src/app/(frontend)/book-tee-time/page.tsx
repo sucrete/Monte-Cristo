@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Book Tee Time | Your door to peace is the Bushwood Booking Engine.',
+  title: 'Book Tee Time | Your door to peace is the Monte Cristo Booking Engine.',
 };
 
 const BookTeeTime = () => {
