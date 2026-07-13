@@ -23,8 +23,8 @@ const contactInfoItems = [
     src: '/images/contact/email-me.svg',
     imageSize: { w: 22, h: 22 },
     title: 'Email Us',
-    content: 'danny@bushwood.com',
-    link: 'www.google.com',
+    content: 'info@golfmontecristo.com',
+    link: 'mailto:info@golfmontecristo.com',
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const ContactInfo = () => {
               <h2>Need directions or a question answered? You're in the right place.</h2>
             </RevealAnimation>
           </div> */}
-          <div className="flex lg:items-stretch flex-col justify-center items-center gap-10 lg:flex-row lg:gap-8 xl:gap-10">
+          <div className="flex lg:items-stretch flex-col justify-center items-center gap-8 lg:flex-row lg:gap-8 xl:gap-10">
             {/* contact info cards  */}
             <div className="flex first-column flex-col gap-8 md:justify-between md:flex-row lg:flex-col">
               {contactInfoItems.map((item) => (

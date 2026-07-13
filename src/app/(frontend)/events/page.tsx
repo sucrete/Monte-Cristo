@@ -13,7 +13,7 @@ import { EVENTS_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Events at Bushwood | Find out about what is happening at Bushwood Golf Course.',
+  title: 'Events at Monte Cristo | Find out about what&#39;s happening at Monte Cristo Golf & Country Club.',
 };
 
 const Course = async () => {

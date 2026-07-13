@@ -17,7 +17,7 @@ import { RATES_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Greens Fees | Bushwood Golf Course in Davie, FL',
+  title: 'Greens Fees | Fees to enjoy our beautiful greens.',
 };
 
 const GreensFees = async () => {
