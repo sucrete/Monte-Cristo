@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-export const DEFAULT_URL = 'https://bushwood-golf-course.vercel.app/';
-export const DEFAULT_TITLE = 'Bushwood Country Club | Davie, Florida';
+export const DEFAULT_URL = 'https://www.golfmontecristo.com/';
+export const DEFAULT_TITLE = 'Monte Cristo Golf & Country Club | Edinburg, TX';
 export const DEFAULT_DESCRIPTION =
-  'Bushwood Golf Club in Davie, FL. Experience a premier 18-hole championship course, world-class amenities, and private club service in South Florida.';
-export const DEFAULT_IMAGE_URL = 'https://images.prismic.io/staticmania/aPD-K55xUNkB2D2X_og-image.jpg';
+  'Monte Cristo Golf & Country Club is a hidden gem where a tropical climate creates a picturesque setting for a day on the greens.';
+export const DEFAULT_IMAGE_URL = 'https://www.golfmontecristo.com/images/home/monte-cristo/mc-squad.jpg';
 
 
 //* This is just an object that sets default metadata
@@ -14,7 +14,7 @@ const defaultMetadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   openGraph: {
     type: 'website',
-    siteName: 'Bushwood Golf Course',
+    siteName: 'Monte Cristo Golf & Country Club',
     url: DEFAULT_URL,
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
