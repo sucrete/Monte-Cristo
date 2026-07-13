@@ -65,9 +65,9 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                   <p className="text-accent/60  ">Pages</p>
                   <ul className="space-y-0 text-center md:text-left">
                     <li>
-                      <Link href="/greens-fees" className="footer-link">
+                      {/* <Link href="/greens-fees" className="footer-link">
                         Greens Fees
-                      </Link>
+                      </Link> */}
                     </li>
                     <li>
                       <Link href="/events" className="footer-link">
