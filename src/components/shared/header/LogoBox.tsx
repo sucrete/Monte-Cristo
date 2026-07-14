@@ -1,7 +1,7 @@
 import { BushwoodLogoScript } from '../../svg-components/BushwoodLogos';
 import Image from 'next/image';
 import MCLogo from '@public/images/shared/logos/monte-cristo-logo-full.svg';
-import MCLogoPlaque from '@public/images/shared/logos/monte-cristo-logo.png';
+import MCLogoPlaque from '@public/images/shared/logos/logo.png';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
 
