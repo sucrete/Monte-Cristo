@@ -42,18 +42,27 @@ const CourseIntro = () => {
     const video = videoRef.current;
     if (!video) return;
     let hls;
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = MUX_SRC;
-    } else {
-      import('hls.js').then(({ default: Hls }) => {
-        if (Hls.isSupported()) {
-          hls = new Hls({ lowLatencyMode: false, maxBufferLength: 10 });
-          hls.loadSource(MUX_SRC);
-          hls.attachMedia(video);
-        }
-      });
-    }
-    return () => hls?.destroy();
+    let cancelled = false;
+    video.muted = true;
+    const play = () => video.play().catch(() => {});
+
+    // Prefer hls.js (MSE) everywhere it's supported; fall back to native HLS (Safari/iOS).
+    import('hls.js').then(({ default: Hls }) => {
+      if (cancelled) return;
+      if (Hls.isSupported()) {
+        hls = new Hls({ lowLatencyMode: false, maxBufferLength: 10 });
+        hls.on(Hls.Events.MANIFEST_PARSED, play);
+        hls.loadSource(MUX_SRC);
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = MUX_SRC;
+        video.addEventListener('loadedmetadata', play, { once: true });
+      }
+    });
+    return () => {
+      cancelled = true;
+      hls?.destroy();
+    };
   }, []);
 
   useGSAP(
@@ -161,6 +170,7 @@ const CourseIntro = () => {
               style={{ willChange: 'transform' }}>
               <video
                 ref={videoRef}
+                poster="https://image.mux.com/82p26i2ivu9e6m02FXiBOqjBF00SQdc02CN00RLfBJ4w400M/thumbnail.webp?width=960"
                 autoPlay
                 muted
                 loop
